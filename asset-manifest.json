@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/personnalsite/static/css/main.fe220b3b.css",
+    "main.js": "/personnalsite/static/js/main.ab2606ad.js",
+    "static/js/787.4479981f.chunk.js": "/personnalsite/static/js/787.4479981f.chunk.js",
+    "static/media/hero.mp4": "/personnalsite/static/media/hero.408c833b6eccafddc43c.mp4",
+    "static/media/whyme.jpg": "/personnalsite/static/media/whyme.63f3dda3eab35f8fcd02.jpg",
+    "static/media/desktop.jpg": "/personnalsite/static/media/desktop.9eb55645e2b135c208d3.jpg",
+    "static/media/seo.jpg": "/personnalsite/static/media/seo.74362803aec95be75aa4.jpg",
+    "static/media/listen.png": "/personnalsite/static/media/listen.415db56231c41d70a8ad.png",
+    "static/media/bg-circles.png": "/personnalsite/static/media/bg-circles.81a0a687976ce19a8e1f.png",
+    "static/media/ampoule-bg.jpg": "/personnalsite/static/media/ampoule-bg.dd4956af2722142290b9.jpg",
+    "static/media/computer.jpg": "/personnalsite/static/media/computer.9d713616b395f60a5fba.jpg",
+    "static/media/paint.jpg": "/personnalsite/static/media/paint.ce5bd4b78d6603669bbe.jpg",
+    "static/media/details.jpg": "/personnalsite/static/media/details.6aadb4d32e47b03ce554.jpg",
+    "static/media/baloons.jpg": "/personnalsite/static/media/baloons.0ff2d643698cc96e2516.jpg",
+    "index.html": "/personnalsite/index.html",
+    "main.fe220b3b.css.map": "/personnalsite/static/css/main.fe220b3b.css.map",
+    "main.ab2606ad.js.map": "/personnalsite/static/js/main.ab2606ad.js.map",
+    "787.4479981f.chunk.js.map": "/personnalsite/static/js/787.4479981f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe220b3b.css",
+    "static/js/main.ab2606ad.js"
+  ]
+}
