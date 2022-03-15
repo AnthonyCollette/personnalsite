@@ -1,34 +1,56 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { HashLink } from 'react-router-hash-link'
 
 const Navbar = () => {
-	const [scroll, setScroll] = useState(true)
+	const [scroll, setScroll] = useState(false)
+	const [isActive, setActive] = useState(false)
+
+	const ToggleNav = () => {
+		setActive(!isActive)
+	}
+	const DisableNav = () => {
+		setActive(false)
+	}
 
 	window.onscroll = function () {
 		if (window.pageYOffset === 0) {
-			setScroll(true)
-		} else {
 			setScroll(false)
+		} else {
+			setScroll(true)
 		}
 	}
 
-	useEffect(function displayNav() {
-		if (scroll === true) {
-			document.getElementById('nav').style.height = '0px'
-			document.getElementById('nav-container').style.display = 'none'
-		} else {
-			document.getElementById('nav').style.height = '75px'
-			document.getElementById('nav-container').style.display = 'flex'
-		}
-	})
+	// useEffect(function displayNav() {
+	// 	if (scroll === true) {
+	// 		document.getElementById('nav').style.height = '0px'
+	// 		document.getElementById('nav-container').style.display = 'none'
+	// 	} else {
+	// 		document.getElementById('nav').style.height = '75px'
+	// 		document.getElementById('nav-container').style.display = 'flex'
+	// 	}
+	// })
 
 	return (
-		<nav id="nav">
-			<div className="container" id="nav-container">
+		<nav id="nav" className={scroll ? 'nav-scrolled' : ''}>
+			<div
+				className={scroll ? 'container container-display' : 'container'}
+				id="nav-container"
+			>
 				<div className="brand">
 					<span className="logo">ANTHONY COLLETTE</span>
 				</div>
-				<ul>
+				<div className="burger-button" onClick={ToggleNav}>
+					<div
+						className={isActive ? 'line line-1 line-1-rotate' : 'line line-1'}
+					></div>
+					<div
+						className={isActive ? 'line line-2 opacity' : 'line line-2'}
+					></div>
+					<div
+						className={isActive ? 'line line-3 line-3-rotate' : 'line line-3'}
+					></div>
+				</div>
+				<ul className={isActive ? 'nav-display' : ''} onClick={DisableNav}>
 					<li>
 						<HashLink to="/#home">Accueil</HashLink>
 					</li>

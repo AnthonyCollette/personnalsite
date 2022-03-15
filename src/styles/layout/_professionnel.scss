@@ -17,12 +17,22 @@
 	.qualites--content {
 		display: flex;
 		justify-content: space-around;
+		flex-wrap: wrap;
 		.card {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
-			max-width: 25%;
+			width: 40%;
+			&:last-of-type {
+				margin-top: 50px;
+				@include min($lg) {
+					margin-top: 0;
+				}
+			}
+			@include min($lg) {
+				width: 25%;
+			}
 			p {
 				line-height: 150%;
 			}

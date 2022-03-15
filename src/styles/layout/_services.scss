@@ -5,16 +5,25 @@
 	.container {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		flex-direction: column;
+		@include min($lg) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 	&--content {
-		max-width: 45%;
+		max-width: 100%;
+		@include min($lg) {
+			max-width: 45%;
+		}
 		h2 {
 			color: $color-002;
 			margin-bottom: 50px;
 			&::after {
 				content: 'En quoi puis-je vous aider ?';
-				top: 5px;
+				@include min($lg) {
+					top: 5px;
+				}
 			}
 		}
 		p {
@@ -23,6 +32,11 @@
 		}
 	}
 	img {
-		max-width: 50%;
+		max-width: 80%;
+		margin-top: 50px;
+		@include min($lg) {
+			max-width: 50%;
+			margin-top: 0;
+		}
 	}
 }

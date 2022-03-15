@@ -1,6 +1,9 @@
 .quisuisje {
-	padding: 150px 0;
+	padding: 100px 0;
 	background-color: $color-002;
+	@include min($lg) {
+		padding: 150px 0;
+	}
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -9,9 +12,17 @@
 	}
 	&--wrapper {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include min($lg) {
+			flex-direction: row;
+		}
 	}
 	&--content {
-		width: 50%;
+		width: 100%;
+		@include min($lg) {
+			width: 50%;
+		}
 	}
 	h2 {
 		color: $color-003;
@@ -26,7 +37,12 @@
 		margin-bottom: 20px;
 	}
 	img {
-		width: 50%;
+		width: 80%;
 		align-self: center;
+		margin-top: 50px;
+		@include min($lg) {
+			width: 50%;
+			margin-top: 0;
+		}
 	}
 }

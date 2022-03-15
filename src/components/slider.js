@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 const Slider = () => {
 	const [isActive, setActive] = useState(false)
-	// const [stars, setStars] = useState(['1', '2', '3', '4', '5'])
 	const stars = [
 		{ id: '1' },
 		{ id: '2' },

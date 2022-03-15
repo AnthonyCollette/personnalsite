@@ -7,8 +7,13 @@ h1 {
 	color: $color-002;
 	font-size: $font-xxl;
 	font-weight: 600;
-	max-width: 50%;
+	max-width: 80%;
+	text-align: center;
 	line-height: 130%;
+	@include min($lg) {
+		max-width: 50%;
+		text-align: left;
+	}
 }
 
 h2 {
@@ -20,10 +25,13 @@ h2 {
 		position: absolute;
 		content: 'Lorem Ipsum';
 		left: 10px;
-		top: 20%;
+		top: 25%;
 		opacity: 0.1;
-		font-size: 60px;
+		font-size: $font-xxl;
 		z-index: -1;
+		@include min($lg) {
+			font-size: 60px;
+		}
 	}
 }
 

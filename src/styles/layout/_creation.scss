@@ -2,13 +2,19 @@
 	padding: 100px 0 150px;
 	h2 {
 		margin-bottom: 80px;
+		&::after {
+			content: 'Mon processus de création';
+		}
 	}
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 auto;
-		width: 600px;
+		width: 100%;
 		text-align: center;
+		@include min($lg) {
+			width: 600px;
+		}
 		@include min($xl) {
 			width: 900px;
 		}
@@ -18,10 +24,13 @@
 	}
 	.card {
 		position: relative;
-		width: 280px;
+		width: 50%;
 		cursor: pointer;
 		overflow: hidden;
 		min-height: 550px;
+		@include min($lg) {
+			width: 280px;
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -90,13 +99,19 @@
 			color: $color-002;
 			position: absolute;
 			bottom: 30px;
-			left: 30px;
-			max-width: 230px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80%;
+			@include min($lg) {
+				left: 30px;
+				transform: none;
+				width: 230px;
+			}
 		}
 	}
 	.card-1 {
 		&::before {
-			background-image: url('../assets/listen.jpg');
+			background-image: url('../assets/listen.png');
 		}
 	}
 	.card-2 {

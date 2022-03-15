@@ -24,10 +24,13 @@
 	color: $color-002;
 	border: 2px solid $color-003;
 	position: relative;
-	margin-top: 50px;
 	width: fit-content;
 	width: -moz-fit-content;
 	font-size: $font-md;
+	margin: 0 auto;
+	@include min($lg) {
+		margin: 50px 0 0;
+	}
 	&:hover {
 		color: $color-003;
 		background-color: $color-002;

@@ -5,16 +5,44 @@ nav {
 	right: 0;
 	z-index: 999;
 	background-color: $color-002;
-	height: 75px;
+	height: 0;
 	box-shadow: 0px 5px 5px $color-001;
 	transition-duration: 0.4s;
-
+	.burger-button {
+		.line {
+			height: 3px;
+			width: 30px;
+			background-color: $color-001;
+			transform: rotate(0) translateY(0) translateX(0);
+			transition-duration: 0.4s;
+		}
+		.line-2 {
+			margin: 5px 0;
+			opacity: 100%;
+		}
+		@include min($lg) {
+			display: none;
+		}
+		.opacity {
+			opacity: 0;
+		}
+		.line-1-rotate {
+			transform: translateY(10px) rotate(45deg);
+		}
+		.line-3-rotate {
+			transform: translateY(-5px) rotate(-45deg);
+		}
+	}
 	.container {
 		display: flex;
 		align-items: center;
 		width: 100%;
 		justify-content: space-between;
 		padding: 25px 0;
+		position: relative;
+		opacity: 0;
+		transition-duration: 0.4s;
+
 		.brand {
 			.logo {
 				font-size: $font-lg;
@@ -22,10 +50,40 @@ nav {
 				color: $color-003;
 			}
 		}
-		ul {
+		.nav-display {
 			display: flex;
+			top: 100%;
+		}
+		ul {
+			display: none;
+			flex-direction: column;
+			background-color: $color-002;
+			padding: 20px 10px 10px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition-duration: 0.4s;
+			@include min($lg) {
+				display: flex;
+				flex-direction: row;
+				position: relative;
+				padding: 0;
+				background-color: transparent;
+			}
 			li {
-				margin-left: 20px;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid $color-001;
+				@include min($lg) {
+					margin-bottom: 0;
+					padding-bottom: 0;
+					border-bottom: none;
+					margin-left: 20px;
+				}
+				&:last-of-type {
+					border-bottom: none;
+					margin-bottom: 0;
+				}
 			}
 			a {
 				color: $color-001;
@@ -37,4 +95,11 @@ nav {
 			}
 		}
 	}
+	.container-display {
+		opacity: 100%;
+	}
+}
+
+.nav-scrolled {
+	height: 75px;
 }
