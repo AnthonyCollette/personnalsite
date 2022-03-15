@@ -94,7 +94,10 @@
 		.display-bande {
 			&::after {
 				content: '';
-				width: 70%;
+				width: 55%;
+				@include min($xl) {
+					width: 65%;
+				}
 			}
 		}
 	}

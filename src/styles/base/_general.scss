@@ -3,8 +3,11 @@ html {
 }
 
 .container {
-	max-width: 1400px;
 	margin: 0 auto;
+	max-width: 90%;
+	@include min($xxl) {
+		max-width: 1400px;
+	}
 }
 
 a {

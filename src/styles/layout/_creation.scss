@@ -5,10 +5,20 @@
 	}
 	ul {
 		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		width: 600px;
+		text-align: center;
+		@include min($xl) {
+			width: 900px;
+		}
+		@include min($xxl) {
+			width: auto;
+		}
 	}
 	.card {
 		position: relative;
-		width: 300px;
+		width: 280px;
 		cursor: pointer;
 		overflow: hidden;
 		min-height: 550px;
@@ -33,7 +43,9 @@
 			inset: 0 0 0 0;
 			padding: 30px;
 		}
-		&:hover {
+		&:hover,
+		&:active,
+		&:focus {
 			p {
 				opacity: 100%;
 			}
