@@ -1,0 +1,36 @@
+.whyme {
+	background-color: $color-001;
+	color: $color-002;
+	padding: 100px 0;
+	h2 {
+		line-height: 130%;
+		&::after {
+			content: 'Pourquoi faire appel à un freelance à la fois développeur web et
+            graphiste ?';
+			top: 10px;
+		}
+	}
+	&--content {
+		margin-top: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		img {
+			width: 50%;
+		}
+		&__text {
+			max-width: 45%;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	h3 {
+		color: $color-002;
+		margin: 50px 0 20px;
+	}
+}

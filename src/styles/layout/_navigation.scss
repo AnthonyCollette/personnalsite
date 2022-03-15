@@ -1,0 +1,40 @@
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: $color-002;
+	height: 75px;
+	box-shadow: 0px 5px 5px $color-001;
+	transition-duration: 0.4s;
+
+	.container {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+		padding: 25px 0;
+		.brand {
+			.logo {
+				font-size: $font-lg;
+				font-weight: 600;
+				color: $color-003;
+			}
+		}
+		ul {
+			display: flex;
+			li {
+				margin-left: 20px;
+			}
+			a {
+				color: $color-001;
+				text-decoration: none;
+				transition-duration: 0.4s;
+				&:hover {
+					color: $color-003;
+				}
+			}
+		}
+	}
+}

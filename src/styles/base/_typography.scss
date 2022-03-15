@@ -1,0 +1,44 @@
+body {
+	font-family: $font-001;
+	font-size: $font-md;
+}
+
+h1 {
+	color: $color-002;
+	font-size: $font-xxl;
+	font-weight: 600;
+	max-width: 50%;
+	line-height: 130%;
+}
+
+h2 {
+	font-size: $font-xxl;
+	position: relative;
+	font-weight: 600;
+	z-index: 0;
+	&::after {
+		position: absolute;
+		content: 'Lorem Ipsum';
+		left: 10px;
+		top: 20%;
+		opacity: 0.1;
+		font-size: 60px;
+		z-index: -1;
+	}
+}
+
+h3 {
+	font-size: $font-lg;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: $color-004;
+	margin: 20px 0 10px;
+}
+
+p {
+	line-height: 130%;
+}
+
+strong {
+	font-weight: 600;
+}

@@ -1,0 +1,28 @@
+.services {
+	padding: 100px 0;
+	background-color: $color-001;
+	color: $color-002;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&--content {
+		max-width: 45%;
+		h2 {
+			color: $color-002;
+			margin-bottom: 50px;
+			&::after {
+				content: 'En quoi puis-je vous aider ?';
+				top: 5px;
+			}
+		}
+		p {
+			margin: 20px 0;
+			line-height: 130%;
+		}
+	}
+	img {
+		max-width: 50%;
+	}
+}

@@ -1,0 +1,43 @@
+footer {
+	background-color: $color-003;
+	color: $color-002;
+	padding: 50px 0;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		position: relative;
+	}
+	.copyright {
+		text-align: center;
+		a {
+			color: $color-002;
+			transition-duration: 0.4s;
+			&:hover {
+				color: $color-005;
+			}
+		}
+		p {
+			margin-top: 10px;
+		}
+	}
+	i {
+		color: $color-002;
+		font-size: $font-lg;
+		transition-duration: 0.4s;
+	}
+	.socialmedia {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		a {
+			margin-left: 20px;
+			&:hover {
+				i {
+					color: $color-005;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.quisuisje {
+	padding: 150px 0;
+	background-color: $color-002;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&--wrapper {
+		display: flex;
+	}
+	&--content {
+		width: 50%;
+	}
+	h2 {
+		color: $color-003;
+		margin-bottom: 30px;
+		&::after {
+			content: 'Qui suis-je ?';
+		}
+	}
+	p {
+		line-height: 150%;
+		max-width: 90%;
+		margin-bottom: 20px;
+	}
+	img {
+		width: 50%;
+	}
+}
