@@ -16,14 +16,24 @@
 	}
 	.qualites--content {
 		display: flex;
-		justify-content: space-around;
+		align-items: center;
 		flex-wrap: wrap;
+		flex-direction: column;
+		@include min($sm) {
+			flex-direction: row;
+			justify-content: space-around;
+		}
 		.card {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
-			width: 40%;
+			width: 90%;
+			margin-bottom: 80px;
+			@include min($sm) {
+				width: 40%;
+				margin-bottom: 0;
+			}
 			&:last-of-type {
 				margin-top: 50px;
 				@include min($lg) {

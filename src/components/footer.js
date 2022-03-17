@@ -6,7 +6,7 @@ const footer = () => {
 		<footer>
 			<div className="container">
 				<div className="copyright">
-					<Link to="/mentions">Mentions légales</Link>
+					<Link to="/mentions-legales">Mentions légales</Link>
 					<p>© Anthony Collette, 2022</p>
 				</div>
 				<div className="socialmedia">

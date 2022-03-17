@@ -5,7 +5,6 @@ import Professionnel from '../components/professionnel'
 import Services from '../components/services'
 import Creation from '../components/creation'
 import Whyme from '../components/whyme'
-import Footer from '../components/footer'
 import Contact from '../components/contact'
 
 const home = () => {
@@ -18,7 +17,6 @@ const home = () => {
 			<Creation />
 			<Whyme />
 			<Contact />
-			<Footer />
 		</div>
 	)
 }

@@ -7,6 +7,10 @@ footer {
 		align-items: center;
 		justify-content: space-around;
 		position: relative;
+		flex-direction: column;
+		@include min($lg) {
+			flex-direction: row;
+		}
 	}
 	.copyright {
 		text-align: center;
@@ -27,10 +31,14 @@ footer {
 		transition-duration: 0.4s;
 	}
 	.socialmedia {
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
+		margin-top: 50px;
+		@include min($lg) {
+			margin-top: 0;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 		a {
 			margin-left: 20px;
 			&:hover {

@@ -12,6 +12,7 @@
 		margin: 0 auto;
 		width: 100%;
 		text-align: center;
+		justify-content: center;
 		@include min($lg) {
 			width: 600px;
 		}
@@ -24,10 +25,13 @@
 	}
 	.card {
 		position: relative;
-		width: 50%;
+		width: 80%;
 		cursor: pointer;
 		overflow: hidden;
 		min-height: 550px;
+		@include min($sm) {
+			width: 50%;
+		}
 		@include min($lg) {
 			width: 280px;
 		}
@@ -60,11 +64,18 @@
 			}
 			h3 {
 				color: $color-007;
-				top: 30%;
+				top: 20%;
+				@include min($sm) {
+					top: 30%;
+				}
 			}
 			i {
 				color: $color-007;
 				top: 10%;
+				opacity: 0;
+				@include min($sm) {
+					opacity: 100%;
+				}
 			}
 			&::before {
 				filter: saturate(100%);
